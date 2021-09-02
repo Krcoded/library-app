@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const renter = require("../renters");
+const renter = require("./rentals");
 
 // POST
-router.post("/renters", async (req, res) => {
+router.post("/renter", async (req, res) => {
   const newRenter = await new Renter({
     name: req.body.name,
     book: req.body.book,
